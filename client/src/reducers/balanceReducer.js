@@ -17,8 +17,6 @@ export default (state = initialState, action) => {
         currency: newCurrency.toFixed(2),
         cryptoCurrency: newCryptoCurrency.toFixed(8)
       }
-      break;
-
     case GET_BALANCE:
       return state;
 
