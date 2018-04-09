@@ -2,7 +2,7 @@ import { UPDATE_BALANCE, GET_BALANCE } from '../actions/balanceActions';
 
 const initialState = {
   currency: 156.12,
-  cryptoCurrency: 0.00000000
+  cryptoCurrency: '0.00000000'
 }
 
 export default (state = initialState, action) => {
