@@ -9,9 +9,13 @@ class Estimate extends Component {
   componentWillMount = () => {
     this.props.getLastPrice();
   }
-  
+
   onChange = (e) => {
     let value = parseFloat(e.target.value);
+
+    if (isNaN(value)) {
+      this.props.resetEstimate();
+    }
     
     if (value <= this.props.balance.currency) {
       this.props.getEstimate(e.target.name, value);
@@ -27,8 +31,8 @@ class Estimate extends Component {
           value={this.props.estimate.currency}
         />
         <p className='estimate-header'> For </p>
-        <CryptoCurrency 
-          value={this.props.estimate.cryptoCurrency}
+        <CryptoCurrency
+          value={this.props.estimate.cryptoCurrency || '' }
         />
       </div>
     );
