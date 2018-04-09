@@ -1,0 +1,17 @@
+.trade-button {
+  background-color: rgb(37, 58, 228);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: large;
+  width: 195px;
+  margin-top: 10px;
+
+}
+
+.trade {
+  margin-left: 2%;
+}
