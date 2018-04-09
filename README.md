@@ -7,6 +7,8 @@ Application behaviour:
 - Market price of Bitcoin is fetched via public API
 - Quote is returned based on Bitcoin price & USD amount entered by user
 - Trade button will execute trade for Bitcoin
+- USD currency is valid to 2 decimal points
+- Bitcoin crypto-currency is valid to 8 decimal points
 
 ## Configuration
 All packages and dependencies must be installed for both client & api server before they can be run.
@@ -40,4 +42,4 @@ Steps to configure Api server:
 Api sever will start and listen on port 3001
 
 **Note:**
-*Build files are provided in this repo. After api server is started, they can be accessed at* `http://localhost:3001/`
+*Build files are provided in this repo. They can be accessed at* `http://localhost:3001/` *after Api sever starts*
