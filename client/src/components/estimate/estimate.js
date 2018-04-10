@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from  'react-redux';
+import PropTypes from 'prop-types';
 import Currency from './currency';
 import CryptoCurrency from './crytocurrency';
 import { getLastPrice, getEstimate, resetEstimate } from '../../actions/estimateActions';
@@ -32,16 +33,23 @@ class Estimate extends Component {
         />
         <p className='estimate-header'> For </p>
         <CryptoCurrency
-          value={this.props.estimate.cryptoCurrency || '' }
+          value={this.props.estimate.cryptoCurrency}
         />
       </div>
     );
   }
 }
 
+Estimate.propTypes = {
+  getLastPrice: PropTypes.func.isRequired,
+  getEstimate: PropTypes.func.isRequired,
+  resetEstimate: PropTypes.func.isRequired,
+  onChange: PropTypes.func
+};
+
 const mapStateToProps = state => ({
   estimate: state.estimate,
   balance: state.balance
-})
+});
 
 export default connect(mapStateToProps, { getLastPrice, getEstimate, resetEstimate })(Estimate);

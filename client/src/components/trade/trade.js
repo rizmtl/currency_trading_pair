@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from  'react-redux';
+import PropTypes from 'prop-types';
 import Estimate from '../estimate/estimate';
 import Balance from '../balance/balance';
 import { getBalance, updateBalance } from '../../actions/balanceActions';
@@ -43,6 +44,13 @@ class Trade extends Component {
     );  
   }
 }
+
+Trade.propTypes = {
+  getBalance: PropTypes.func.isRequired,
+  updateBalance: PropTypes.func.isRequired,
+  resetEstimate: PropTypes.func.isRequired,
+  balance: PropTypes.object
+};
 
 const mapStateToProps = state => ({
   balance: state.balance,

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const CryptoCurrency = props => {
   return(
@@ -18,12 +19,16 @@ const CryptoCurrency = props => {
         name='cryptoCurrency'
         className='estimate-input'
         placeholder='Diplay Quote'
-        value={props.value}
+        value={props.value || ''}
         step='0.00000001'
         readOnly
       />
     </div>
   );
+}
+
+CryptoCurrency.propTypes = {
+  value:PropTypes.number
 }
 
 export default CryptoCurrency;

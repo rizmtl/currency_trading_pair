@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './balance.css';
 
 const Balance = props => {
@@ -12,4 +13,9 @@ const Balance = props => {
     </div>
   );
 }
+
+Balance.propTypes = {
+  balance: PropTypes.object
+}
+
 export default Balance;

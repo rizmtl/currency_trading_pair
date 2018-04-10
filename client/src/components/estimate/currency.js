@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './estimate.css';
 
 const Currency = props => {
@@ -16,15 +17,19 @@ const Currency = props => {
       <input 
         type='number' 
         name='currency'
+        id='currency-input'
         className='estimate-input'
         placeholder='Enter your amount' 
         onChange={props.onChange}
-        onClick={props.onClick}
         value={props.value}
         step='0.01'
       />
     </div>
   );
+}
+
+Currency.propTypes = {
+  value: PropTypes.number
 }
 
 export default Currency;
